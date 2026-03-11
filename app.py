@@ -246,6 +246,7 @@ hist_daily = hist_daily.sort_values('Fecha')
 time_data_list = hist_daily.values.tolist()
 
 option_spline = {
+    "backgroundColor": "transparent",
     "title": {
         "text": "Histórico de Ventas (Transacciones Individuales)",
         "left": "center",
@@ -320,6 +321,7 @@ with c2_left:
     top10 = top_products.sort_values(by='Total', ascending=True).tail(10) # Ascending for Echarts horizontal bar
     
     option_bar = {
+        "backgroundColor": "transparent",
         "title": {
             "text": "Top 10 Productos Más Vendidos",
             "textStyle": {"color": COLOR_TEXT, "fontFamily": "Inter", "fontSize": 16, "fontWeight": "normal"}
@@ -369,6 +371,7 @@ with c2_right:
         data_donut = []
     
     option_donut = {
+        "backgroundColor": "transparent",
         "title": {
             "text": "Top 5 Productos (Unidades)",
             "left": "center",
@@ -436,6 +439,7 @@ diff_color = COLOR_TERRACOTTA if diff_pct > 0 else COLOR_GRAY
 diff_sign = "+" if diff_pct > 0 else ""
 
 option_comparison = {
+    "backgroundColor": "transparent",
     "title": {
         "text": f"Diferencia: {diff_sign}{diff_pct:,.1f}% vs Mejor Mes",
         "left": "center",
