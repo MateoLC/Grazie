@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# Sensitive Data
+credentials.json.json
+*.xlsx
+.streamlit/secrets.toml
+
+# OS Files
+.DS_Store
+Thumbs.db
