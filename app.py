@@ -301,13 +301,13 @@ st.markdown("<hr>", unsafe_allow_html=True)
 # ==========================================
 # SECCIÓN 2: LUPA EN ABRIL
 # ==========================================
-st.markdown("<h2>2. Lupa en Abril (Mes Actual)</h2>", unsafe_allow_html=True)
+st.markdown("<h2>2. Lupa en Mes Actual</h2>", unsafe_allow_html=True)
 
 april_revenue = df_april['Total'].sum()
 april_units = df_april['Suma de Lineitem quantity'].sum()
 
 colA, colB = st.columns(2)
-colA.metric("Ingresos de Abril", f"${april_revenue:,.0f}")
+colA.metric("Ingresos Mes Actual", f"${april_revenue:,.0f}")
 colB.metric("Unidades Vendidas", f"{april_units:,.0f}")
 
 st.markdown("<br>", unsafe_allow_html=True)
@@ -422,9 +422,9 @@ st.markdown("<hr>", unsafe_allow_html=True)
 # ==========================================
 # SECCIÓN 3: LA COMPARACIÓN (El Cara a Cara)
 # ==========================================
-st.markdown("<h2>3. El Cara a Cara: Histórico vs Abril</h2>", unsafe_allow_html=True)
+st.markdown("<h2>3. El Cara a Cara: Histórico vs Mes Actual</h2>", unsafe_allow_html=True)
 
-st.markdown("<p style='font-size: 1.1rem; color: #666;'>Comparación de ingresos netos de Abril versus el mes más exitoso registrado en el histórico de la marca.</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-size: 1.1rem; color: #666;'>Comparación de ingresos netos del Mes Actual versus el mes más exitoso registrado en el histórico de la marca.</p>", unsafe_allow_html=True)
 
 # Data prep for comparison (Best Historical Month vs April)
 df_hist['Month_str'] = df_hist['created_at'].dt.strftime('%B %Y')
@@ -462,7 +462,7 @@ option_comparison = {
     },
     "xAxis": {
         "type": 'category',
-        "data": [f'Récord Histórico\n({best_month_name})', 'Rendimiento Abril\n(Actual)'],
+        "data": [f'Récord Histórico\n({best_month_name})', 'Rendimiento\nMes Actual'],
         "axisTick": {"alignWithLabel": True, "show": False},
         "axisLine": {"lineStyle": {"color": "rgba(212, 175, 55, 0.4)"}},
         "axisLabel": {
